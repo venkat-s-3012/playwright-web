@@ -20,3 +20,9 @@ test_data/Authentication.json
 **/auth*.json
 **/.auth/
 
+# Practice scripts
+tests/Automation-Practice/
+
+# Personal documents
+downloads/Offer_Letter_Arun.pdf
+
