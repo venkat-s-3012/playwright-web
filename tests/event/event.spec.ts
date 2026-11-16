@@ -7,7 +7,7 @@ test.describe('Events Page', ()=>{
 
     test.beforeEach(async({page, login, homePage})=>{
         eventPage = new EventPage(page)
-        homePage.clickExploreBtn();
+        await homePage.clickExploreBtn();
     })
 
     test('@smoke - Verify AddEvent Button is visible', async({page})=>{
