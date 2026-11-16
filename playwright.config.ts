@@ -47,7 +47,7 @@ export default defineConfig({
 
     //storageState:'test_data/Authentication.json',
 
-    headless: false,
+    headless: true,
   },
 
 
