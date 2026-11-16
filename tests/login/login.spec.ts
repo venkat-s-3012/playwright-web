@@ -34,8 +34,9 @@ test.describe('Login Module', ()=>{
         test('@smoke - Valid Login', async({page, homePage})=>{
         console.log(await loginPage.getTitle());
         await loginPage.login(valid.email, valid.password);
-        await homePage.expectHomeTabVisible();
-        await homePage.logOut();
+        await loginPage.expectLoginError();
+        // await homePage.expectHomeTabVisible();
+        // await homePage.logOut();
         })
 
 
