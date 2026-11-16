@@ -19,11 +19,11 @@ test.describe('Login Module', ()=>{
 
     test.describe('UI Validation', ()=>{
 
-        test('Verify email field visibility', async()=>{
+        test('@smoke - Verify email field visibility', async()=>{
             await loginPage.expectEmailFieldVisible();
         })
 
-        test("Verify Password field visible", async()=>{
+        test("@smoke - Verify Password field visible", async()=>{
             await loginPage.expectPasswordFieldVisible();
         })
 
