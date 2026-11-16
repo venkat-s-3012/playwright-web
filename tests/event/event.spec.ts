@@ -10,11 +10,11 @@ test.describe('Events Page', ()=>{
         homePage.clickExploreBtn();
     })
 
-    test('Verify AddEvent Button is visible', async({page})=>{
+    test('@smoke - Verify AddEvent Button is visible', async({page})=>{
         await eventPage.expectAddEventBtnVisible();
     })
 
-    test('Verify navigation of AddEvent btn', async({page})=>{
+    test('@smoke - Verify navigation of AddEvent btn', async({page})=>{
         await eventPage.navigateToNewEventForm();
     })
 

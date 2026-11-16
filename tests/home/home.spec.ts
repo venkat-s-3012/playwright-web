@@ -10,7 +10,7 @@ test.describe('HomePage Validations', ()=>{
     test.beforeEach(async ({page, login}) => {
     });
 
-    test('Verify navigation of explore event btn', async({page, homePage})=>{
+    test('@smoke - Verify navigation of explore event btn', async({page, homePage})=>{
         await homePage.clickExploreBtn();
         await page.waitForLoadState('load')
     })
