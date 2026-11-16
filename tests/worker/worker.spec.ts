@@ -1,7 +1,7 @@
 import { from } from "node:stream/iter";
-import { valid } from "../testData/login.data";
+import { valid } from "../../test-data/login.data";
 import { Page } from "@playwright/test";
-import {test} from '../fixtures/fixtures'
+import {test} from '../../fixtures/fixtures'
 
 
 

@@ -1,5 +1,5 @@
-import {test} from '../fixtures/fixtures'
-import { EventPage } from '../pages/event.page';
+import {test} from '../../fixtures/fixtures'
+import { EventPage } from '../../pages/event.page';
 
 test.describe('Events Page', ()=>{
 

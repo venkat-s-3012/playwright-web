@@ -1,8 +1,8 @@
 //import {test, expect, Page, chromium} from '@playwright/test'
-import { LoginPage } from '../pages/login.page'
-import { HomePage } from '../pages/home.page';
-import { valid, invalid } from '../testData/login.data';
-import {test, expect} from '../fixtures/fixtures'
+import { LoginPage } from '../../pages/login.page'
+import { HomePage } from '../../pages/home.page';
+import { valid, invalid } from '../../test-data/login.data';
+import {test, expect} from '../../fixtures/fixtures'
 import { tr } from '@faker-js/faker';
 import { emit } from 'node:cluster';
 

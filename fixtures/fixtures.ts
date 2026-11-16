@@ -1,5 +1,5 @@
 import{test as base, expect} from '@playwright/test'
-import { valid } from '../testData/login.data'
+import { valid } from '../test-data/login.data'
 import { LoginPage } from '../pages/login.page'
 import { HomePage } from '../pages/home.page'
 import { EventPage } from '../pages/event.page'
