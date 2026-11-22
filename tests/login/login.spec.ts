@@ -5,6 +5,7 @@ import { valid, invalid } from '../../test-data/login.data';
 import {test, expect} from '../../fixtures/fixtures'
 import { tr } from '@faker-js/faker';
 import { emit } from 'node:cluster';
+import { environment } from '../../config/environment';
 
 let loginPage: LoginPage;
 
@@ -33,7 +34,7 @@ test.describe('Login Module', ()=>{
         
         test('@smoke - Valid Login', async({page, homePage})=>{
         console.log(await loginPage.getTitle());
-        await loginPage.login(valid.email, valid.password);
+        await loginPage.login(environment.userName, environment.password);
         await homePage.expectHomeTabVisible();
         await homePage.logOut();
         })
