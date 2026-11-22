@@ -27,6 +27,20 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+
+    - name: Create environment file
+      env:
+        TEST_ENV: ${{ inputs.environment }}
+        BASE_URL: ${{ secrets.BASE_URL }}
+        API_BASE_URL: ${{ secrets.API_BASE_URL }}
+        USERNAME: ${{ secrets.USERNAME }}
+        PASSWORD: ${{ secrets.PASSWORD }}
+      run: |
+        echo "BASE_URL=${BASE_URL}" >> .env.${TEST_ENV}
+        echo "API_BASE_URL=${API_BASE_URL}" >> .env.${TEST_ENV}
+        echo "USERNAME=${USERNAME}" >> .env.${TEST_ENV}
+        echo "PASSWORD=${PASSWORD}" >> .env.${TEST_ENV}
+        
     - name: Run Playwright tests
       run: npx playwright test --grep '@smoke'
       env:
