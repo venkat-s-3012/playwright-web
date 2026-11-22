@@ -1,0 +1,28 @@
+
+# macOS
+.DS_Store
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Authentication / storage state
+test_data/Authentication.json
+**/auth*.json
+**/.auth/
+
+# Practice scripts
+tests/Automation-Practice/
+
+# Personal documents
+downloads/Offer_Letter_Arun.pdf
+

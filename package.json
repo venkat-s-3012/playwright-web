@@ -1,0 +1,31 @@
+{
+  "name": "playwright-web",
+  "version": "1.0.0",
+  "description": "This is sample exercise project for playwright automation.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/venkat-s-3012/playwright-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/venkat-s-3012/playwright-web/issues"
+  },
+  "homepage": "https://github.com/venkat-s-3012/playwright-web#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.64.0",
+    "@types/node": "^26.6.5",
+    "mailosaur": "^11.1.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "csv-parse": "^7.0.3",
+    "dotenv": "^18.0.8",
+    "freecustom-email": "^1.0.4",
+    "otpauth": "^9.6.0"
+  }
+}
