@@ -4,6 +4,16 @@ on:
     branches: [ main, master, 'feature/**' ]
   pull_request:
     branches: [ main, master ]
+
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: Select environment
+        required: true
+        type: choice
+        options:
+          - qa
+          - prod
 jobs:
   test:
     timeout-minutes: 60
@@ -27,3 +37,5 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
+      env:
+          TEST_ENV: ${{ inputs.environment || 'qa' }}
