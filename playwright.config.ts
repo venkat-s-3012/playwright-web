@@ -1,5 +1,4 @@
 import { defineConfig, devices} from '@playwright/test';
-import { time } from 'node:console';
 
 /**
  * Read environment variables from file.
@@ -7,8 +6,11 @@ import { time } from 'node:console';
  */
 import dotenv from 'dotenv';
 import path from 'path';
-import { tr } from '@faker-js/faker';
-dotenv.config({ path: path.resolve(__dirname, '.env') });
+
+
+const environment = process.env.TEST_ENV || 'qa'
+
+dotenv.config({ path: path.resolve(__dirname, `.env.${environment}`) });
 
 /**
  * See https://playwright.dev/docs/test-configuration.
@@ -35,12 +37,14 @@ export default defineConfig({
     navigationTimeout: 30_000,
 
     /* Base URL to use in actions like `await page.goto('')`. */
-    baseURL: process.env.BASE_URL || 'http://localhost:3000',
+    baseURL: process.env.BASE_URL,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
     screenshot: 'only-on-failure',
     video: 'retain-on-failure',
+
+    
     
     
     // httpCredentials: {
@@ -50,7 +54,7 @@ export default defineConfig({
 
     //storageState:'test_data/Authentication.json',
 
-    headless: true,
+    headless: !!process.env.CI,
   },
 
 
